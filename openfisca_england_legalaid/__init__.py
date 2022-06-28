@@ -12,8 +12,8 @@ import os
 
 from openfisca_core.taxbenefitsystems import TaxBenefitSystem
 
-from openfisca_england-legalaid import entities
-from openfisca_england-legalaid.situation_examples import couple
+from openfisca_england_legalaid import entities
+from openfisca_england_legalaid.situation_examples import couple
 
 
 COUNTRY_DIR = os.path.dirname(os.path.abspath(__file__))

@@ -7,14 +7,14 @@ The country whose law is modelled here has a very simple tax and benefit system.
 - On the first of December, 2015, it introduced a basic income for all its citizens of age who have no income.
 - On the first of December, 2016, it removed the income condition, providing all its adult citizens with a basic income.
 
-These elements are described in different folders. All the modelling happens within the `openfisca_england-legalaid` folder.
+These elements are described in different folders. All the modelling happens within the `openfisca_england_legalaid` folder.
 
 - The rates are in the `parameters` folder.
 - The formulas are in the `variables` folder.
 - This country package comes also with *reforms* in the `reforms` folder. This is optional: your country may exist without defining any reform.
-    - In this country, there is [a reform project](./openfisca_england-legalaid/reforms/modify_social_security_taxation.py) aiming to modify the social security taxation, deleting the first bracket, raising the intermediary ones and adding a new bracket with a higher tax rate of `40 %` for people earning more than `40000`. This reform project would apply starting from `2017-01-01`.
+    - In this country, there is [a reform project](./openfisca_england_legalaid/reforms/modify_social_security_taxation.py) aiming to modify the social security taxation, deleting the first bracket, raising the intermediary ones and adding a new bracket with a higher tax rate of `40 %` for people earning more than `40000`. This reform project would apply starting from `2017-01-01`.
 
-The files that are outside from the `openfisca_england-legalaid` folder are used to set up the development environment.
+The files that are outside from the `openfisca_england_legalaid` folder are used to set up the development environment.
 
 ## Packaging your Country Package for Distribution
 
@@ -72,7 +72,7 @@ pip --version  # should print at least 9.0.
 Install the Country Package:
 
 ```sh
-pip install openfisca_england-legalaid
+pip install openfisca_england_legalaid
 ```
 
 :warning: Please beware that installing the Country Package with `pip` is dependent on its maintainers publishing said package.
@@ -114,8 +114,8 @@ pip --version  # should print at least 9.0.
 Clone this Country Package on your machine:
 
 ```sh
-git clone https://github.com/openfisca/openfisca-england-legalaid.git
-cd openfisca-england-legalaid
+git clone https://github.com/openfisca/openfisca-england_legalaid.git
+cd openfisca-england_legalaid
 pip install --editable .[dev]
 ```
 
@@ -160,10 +160,10 @@ This endpoint returns the [Open API specification](https://www.openapis.org/) of
 
 You can test your new Web API by sending it example JSON data located in the `situation_examples` folder.
 
-Substitute your package's country name for `openfisca_england-legalaid` below:
+Substitute your package's country name for `openfisca_england_legalaid` below:
 
 ```sh
 curl -X POST -H "Content-Type: application/json" \
-  -d @./openfisca_england-legalaid/situation_examples/couple.json \
+  -d @./openfisca_england_legalaid/situation_examples/couple.json \
   http://localhost:5000/calculate
 ```

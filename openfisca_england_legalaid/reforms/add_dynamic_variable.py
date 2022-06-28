@@ -12,7 +12,7 @@ from openfisca_core.reforms import Reform
 from openfisca_core.variables import Variable
 
 # Import the Entities specifically defined for this tax and benefit system
-from openfisca_england-legalaid.entities import Person
+from openfisca_england_legalaid.entities import Person
 
 
 def create_dynamic_variable(name, **variable):
